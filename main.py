@@ -30,6 +30,19 @@ while True:
                     lm_list[20].y < lm_list[19].y and lm_list[4].y < lm_list[3].y and lm_list[12].y < lm_list[9].y < \
                     lm_list[0].y:
                 cv2.putText(img, 'STOP', (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
+            if lm_list[8].y < lm_list[7].y and lm_list[12].y > lm_list[11].y and lm_list[16].y > lm_list[15].y and \
+                    lm_list[20].y < lm_list[19].y and  lm_list[12].y > lm_list[9].y:
+                              cv2.putText(img, 'YOOO', (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
+
+            if lm_list[8].y > lm_list[7].y and lm_list[8].y < lm_list[4].y and lm_list[12].y < lm_list[11].y and lm_list[16].y < lm_list[15].y and \
+                    lm_list[20].y < lm_list[19].y and lm_list[4].y < lm_list[3].y and lm_list[12].y < lm_list[9].y < \
+                    lm_list[0].y:
+                cv2.putText(img, 'AWESOME', (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
+                
+            if lm_list[8].y < lm_list[7].y and lm_list[12].y < lm_list[11].y and lm_list[16].y > lm_list[15].y and \
+                    lm_list[20].y > lm_list[19].y and lm_list[4].y < lm_list[3].y:   
+               cv2.putText(img, 'PEACE', (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
+                
 
             finger_fold_status = []
             if lm_list[0].x < lm_list[9].x:  # If hand is Left Hand
